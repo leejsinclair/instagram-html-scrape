@@ -1,0 +1,38 @@
+{
+  "name": "instagram-html-scrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leejsinclair/instagram-html-scrape.git"
+  },
+  "keywords": [
+    "instagram",
+    "scraper"
+  ],
+  "author": "Lee Sinclair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leejsinclair/instagram-html-scrape/issues"
+  },
+  "homepage": "https://github.com/leejsinclair/instagram-html-scrape#readme",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "node-html-parser": "^1.1.11",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/async": "^2.0.50",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/mongodb": "^3.1.14",
+    "@types/mongoose": "^5.3.1",
+    "@types/node": "^10.12.10",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
