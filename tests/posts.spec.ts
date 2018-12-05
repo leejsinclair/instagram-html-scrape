@@ -2,7 +2,7 @@ const fs = require('fs')
 import { expect } from 'chai';
 import 'mocha';
 
-import GetInstagramPosts from '../modules/get-posts'
+import GetInstagramPosts from '../index'
 var html
 
 describe('ALLOCATE', () => {

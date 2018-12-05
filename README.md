@@ -13,7 +13,7 @@ npm install --save instagram-html-scrape
 ## Usage
 
 ```
-import GetInstagramPosts from '../modules/get-posts'
+import GetInstagramPosts from 'instagram-html-scrape'
 
 const instagramGetPosts = new GetInstagramPosts('instagram')
     .request()

@@ -101,5 +101,4 @@ var GetInstagramPosts = /** @class */ (function () {
     return GetInstagramPosts;
 }());
 exports.default = GetInstagramPosts;
-//# sourceMappingURL=extract-comments.js.map
-//# sourceMappingURL=get-posts.js.map
+//# sourceMappingURL=index.js.map

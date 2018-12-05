@@ -104,4 +104,3 @@ export default class GetInstagramPosts {
         }
     }
 }
-//# sourceMappingURL=extract-comments.js.map
