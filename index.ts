@@ -22,11 +22,16 @@ export default class GetInstagramPosts {
         this.html = html
     }
     get() {
+        var posts = []
         let dom = this.parseHTML(this.html);
         let scripts = this.extractScripts(dom);
-        let script = this.findDataScript(scripts);
-        let json = this.extractJson(script);
-        let posts = this.extractPosts(json);
+
+        if( scripts && scripts.length > 0 ) {
+            let script = this.findDataScript(scripts);
+            let json = this.extractJson(script);
+            posts = this.extractPosts(json);
+        }
+        
         return posts;
     }
     parseHTML(html) {
@@ -92,7 +97,7 @@ export default class GetInstagramPosts {
             return posts;
         }
         else {
-            return null;
+            return [];
         }
 
         function getContent( edges ) {

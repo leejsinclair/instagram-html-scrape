@@ -5,20 +5,20 @@ var chai_1 = require("chai");
 require("mocha");
 var index_1 = require("../index");
 var html;
-describe('ALLOCATE', function () {
-    before(function (done) {
-        fs.readFile(__dirname + "/fixtures/profile.html", { 'encoding': 'utf8' }, function (err, doc) {
-            if (!err) {
-                html = doc;
-                done();
-            }
-        });
-    });
-    it('Extract posts', function () {
+describe('GET Instagram Posts', function () {
+    it('Extract posts - profile with posts', function () {
+        var doc = fs.readFileSync(__dirname + "/fixtures/profile.html", { 'encoding': 'utf8' });
         var instagramGetPosts = new index_1.default('instagram');
-        instagramGetPosts.setHTML(html);
+        instagramGetPosts.setHTML(doc);
         var posts = instagramGetPosts.get();
         chai_1.expect(posts.length).to.equal(12);
+    });
+    it('Extract posts - proile with no posts', function () {
+        var doc = fs.readFileSync(__dirname + "/fixtures/no-posts.html", { 'encoding': 'utf8' });
+        var instagramGetPosts = new index_1.default('instagram');
+        instagramGetPosts.setHTML(doc);
+        var posts = instagramGetPosts.get();
+        chai_1.expect(posts.length).to.equal(0);
     });
 });
 //# sourceMappingURL=posts.spec.js.map

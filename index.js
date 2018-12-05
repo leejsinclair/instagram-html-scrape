@@ -19,11 +19,14 @@ var GetInstagramPosts = /** @class */ (function () {
         this.html = html;
     };
     GetInstagramPosts.prototype.get = function () {
+        var posts = [];
         var dom = this.parseHTML(this.html);
         var scripts = this.extractScripts(dom);
-        var script = this.findDataScript(scripts);
-        var json = this.extractJson(script);
-        var posts = this.extractPosts(json);
+        if (scripts && scripts.length > 0) {
+            var script = this.findDataScript(scripts);
+            var json = this.extractJson(script);
+            posts = this.extractPosts(json);
+        }
         return posts;
     };
     GetInstagramPosts.prototype.parseHTML = function (html) {
@@ -87,7 +90,7 @@ var GetInstagramPosts = /** @class */ (function () {
             return posts;
         }
         else {
-            return null;
+            return [];
         }
         function getContent(edges) {
             if (edges && edges[0] && edges[0].node && edges[0].node.text) {
