@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/leejsinclair/instagram-html-scrape#readme",
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "node-html-parser": "^1.1.11",
     "request": "^2.88.0"
   },
